@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Wöchentliches Saison-Dashboard der weiblichen B-Jugend von SSG Wuppertal/HSV Wuppertal.">
+  <meta name="theme-color" content="#06331f">
+  <meta property="og:title" content="SSG Wuppertal/HSV Wuppertal · Wochen-Dashboard">
+  <meta property="og:description" content="Spiele, Saisonbilanz, Tabelle und die nächsten Termine auf einen Blick.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/ssg-hsv-wuppertal.png">
+  <title>SSG Wuppertal/HSV Wuppertal · Wochen-Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#inhalt">Zum Inhalt</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand"><img id="brand-logo" alt="Vereinslogo"><div><strong id="team-name">SSG Wuppertal/HSV Wuppertal</strong><span>Weibliche B-Jugend · Wochen-Dashboard</span></div></div>
+      <nav class="nav" aria-label="Seitennavigation">
+        <a href="#spiele">Spiele</a><a href="#rueckblick">Rückblick</a><a href="#tabelle">Tabelle</a>
+        <a class="button" id="source-link" target="_blank" rel="noopener">handball.net ↗</a>
+        <a class="button" href="#" id="print-button">PDF / Drucken</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Dein Team-Update · <span id="season">Saison 2026/27</span></p>
+          <h1 id="page-title">Alles Wichtige auf einen Blick.</h1>
+          <p class="hero-copy">Spielplan, Saisonbilanz, Formkurve und Tabelle der <span id="league">Oberliga weibliche Jugend B</span> – optimiert für Smartphone, Website und Ausdruck.</p>
+          <div class="updated">● <span id="updated">Stand 09.11.2026</span></div>
+        </div>
+        <div class="hero-logo-card"><img id="hero-logo" alt="Logo SSG Wuppertal/HSV Wuppertal"><strong>WEIBLICHE B-JUGEND</strong><small>Gemeinsam. Konzentriert. Als Team.</small></div>
+      </div>
+    </section>
+
+    <section class="kpis" id="kpis" aria-label="Saisonkennzahlen"></section>
+
+    <section class="section" id="spiele" aria-labelledby="spiele-title">
+      <div class="section-head"><div><p class="eyebrow">Dein Kalender</p><h2 id="spiele-title">Die nächsten fünf Spiele</h2><p>Die wichtigsten Termine und Topgegner sofort erkennbar.</p></div><span class="section-note">Gold = Tabellenführer · Silber = Tabellenzweiter</span></div>
+      <div class="next-game" id="next-game"></div>
+      <div class="fixtures" id="fixtures"></div>
+      <div class="round-banner"><span><strong>Rückrundenstart</strong><br>Der Start der Rückrunde ist bewusst separat markiert.</span><strong id="round-date">12.12.2026</strong></div>
+    </section>
+
+    <section class="section" id="rueckblick" aria-labelledby="rueckblick-title">
+      <div class="section-head"><div><p class="eyebrow">Saisonrückblick</p><h2 id="rueckblick-title">Ergebnisse & Formkurve</h2><p>Chronologische Tordifferenz und Ergebnisstände immer aus Wuppertaler Sicht.</p></div></div>
+      <div class="panel back-card">
+        <div class="back-summary" id="last-result"></div>
+        <div class="chart-wrap"><strong>Tordifferenz je Spiel</strong><div class="diff-chart" id="diff-chart" aria-label="Diagramm der Tordifferenz je Spiel"></div></div>
+      </div>
+      <div class="panel results-list" id="results-list" aria-label="Bisherige Saisonspiele"></div>
+    </section>
+
+    <section class="section" id="tabelle" aria-labelledby="tabelle-title">
+      <div class="section-head"><div><p class="eyebrow">Saisonstand</p><h2 id="tabelle-title">Aktuelle Tabelle</h2><p>Wuppertal ist grün hervorgehoben; die letzten fünf Resultate zeigen die Form.</p></div><span class="section-note">Auf dem Smartphone horizontal wischen</span></div>
+      <div class="panel table-panel">
+        <div class="table-scroll">
+          <table class="standings">
+            <thead><tr><th>Pl.</th><th class="team-col">Mannschaft</th><th>Sp.</th><th>Pkt.</th><th>Tore</th><th>Diff.</th><th>S</th><th>U</th><th>N</th><th>Form</th></tr></thead>
+            <tbody id="standings-body"></tbody>
+          </table>
+        </div>
+        <div class="table-summary" id="table-summary"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Wöchentlich aktualisierbares, statisches Dashboard · Saison 2026/27</span>
+      <span>Spieldaten: <a id="footer-source" target="_blank" rel="noopener">handball.net</a> · Vereinslogos aus der bereitgestellten Präsentation</span>
+    </footer>
+  </main>
+
+  <script src="dashboard-daten.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
