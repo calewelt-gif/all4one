@@ -14,8 +14,8 @@ window.DASHBOARD_DATA = {
 
   summary: {
     position: 5,
-    trend: 0,
-    trendLabel: "noch offen – kein Vorwochenvergleich",
+    trend: 1,
+    trendLabel: "Platzierung verbessert",
     played: 6,
     wins: 4,
     draws: 0,
