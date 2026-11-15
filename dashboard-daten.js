@@ -1,6 +1,6 @@
 /*
   WÖCHENTLICHE AKTUALISIERUNG
-  Stand nach abgeschlossenem Spieltag 15.11.2026
+  Stand nach abgeschlossenem 7. Spieltag - 15.11.2026
 */
 window.DASHBOARD_DATA = {
   updatedAt: "15.11.2026, 18:00 Uhr",
@@ -26,8 +26,7 @@ window.DASHBOARD_DATA = {
     { date: "21.11.2026", time: "16:00", opponent: "HC TV Rhede", venue: "Heim", badge: "Tabellenplatz 3", featured: "silver", logo: "assets/hc-tv-rhede.png" },
     { date: "28.11.2026", time: "13:00", opponent: "HC Gelpe/Strombach", venue: "Auswärts", badge: "Tabellenführer · Platz 1", featured: "gold", logo: "assets/hc-gelpe-strombach.png" },
     { date: "29.11.2026", time: "12:45", opponent: "Tschft. St. Tönis III", venue: "Heim", badge: "Doppelspiel-Wochenende", logo: "assets/st-toenis-iii.png" },
-    { date: "06.12.2026", time: "14:15", opponent: "HSG Siebengebirge-Thomasberg", venue: "Auswärts", badge: "Letztes Spiel vor der Rückrunde", logo: "assets/hsg-siebengebirge.jpg" },
-    { date: "12.12.2026", time: "", opponent: "TSV Bayer Leverkusen", venue: "Auswärts", badge: "Rückrundenstart", logo: "assets/tsv-bayer-leverkusen.png" }
+    { date: "06.12.2026", time: "14:15", opponent: "HSG Siebengebirge-Thomasberg", venue: "Auswärts", badge: "Letztes Spiel vor der Rückrunde", logo: "assets/hsg-siebengebirge.jpg" }
   ],
   secondRoundStart: "12.12.2026",
   results: [
@@ -41,16 +40,16 @@ window.DASHBOARD_DATA = {
   ],
   standings: [
     { pos: 1, team: "HC Gelpe/Strombach", played: 7, points: "14:0", goals: "228:144", diff: 84, wins: 7, draws: 0, losses: 0, form: ["S","S","S","S","S"] },
-    { pos: 2, team: "TV Korschenbroich wB1", played: 6, points: "10:2", goals: "133:110", diff: 23, wins: 5, draws: 0, losses: 1, form: ["S","S","N","S","S"] },
-    { pos: 3, team: "HC TV Rhede", played: 6, points: "10:2", goals: "166:134", diff: 32, wins: 5, draws: 0, losses: 1, form: ["S","N","S","S","S"] },
-    { pos: 4, team: "SSG Wuppertal/HSV Wuppertal", played: 7, points: "10:4", goals: "160:149", diff: 11, wins: 5, draws: 0, losses: 2, form: ["N","S","N","S","S"] },
+    { pos: 2, team: "TV Korschenbroich wB1", played: 7, points: "12:2", goals: "160:129", diff: 31, wins: 6, draws: 0, losses: 1, form: ["S","N","S","S","S"] },
+    { pos: 3, team: "HC TV Rhede", played: 7, points: "12:2", goals: "199:151", diff: 48, wins: 6, draws: 0, losses: 1, form: ["N","S","S","S","S"] },
+    { pos: 4, team: "SSG Wuppertal/HSV Wuppertal", played: 7, points: "10:4", goals: "160:149", diff: 11, wins: 5, draws: 0, losses: 2, form: ["S","N","S","S","S"] },
     { pos: 5, team: "TV Issum", played: 7, points: "8:6", goals: "166:158", diff: 8, wins: 4, draws: 0, losses: 3, form: ["S","S","N","N","N"] },
     { pos: 6, team: "HSG Refrath/Hand", played: 7, points: "8:6", goals: "182:166", diff: 16, wins: 4, draws: 0, losses: 3, form: ["S","S","N","N","S"] },
-    { pos: 7, team: "TSV Bayer Leverkusen", played: 6, points: "6:6", goals: "134:136", diff: -2, wins: 3, draws: 0, losses: 3, form: ["N","N","S","S","S"] },
+    { pos: 7, team: "TSV Bayer Leverkusen", played: 7, points: "6:8", goals: "153:163", diff: -10, wins: 3, draws: 0, losses: 4, form: ["N","S","S","S","N"] },
     { pos: 8, team: "Tschft. St. Tönis III", played: 7, points: "6:8", goals: "137:143", diff: -6, wins: 3, draws: 0, losses: 4, form: ["S","N","N","S","N"] },
-    { pos: 9, team: "Bonner JSG II", played: 6, points: "2:10", goals: "136:165", diff: -29, wins: 1, draws: 0, losses: 5, form: ["S","N","N","N","N"] },
-    { pos: 10, team: "HSG Siebengebirge-Thomasberg", played: 6, points: "2:10", goals: "102:149", diff: -47, wins: 1, draws: 0, losses: 5, form: ["N","N","S","N","N"] },
+    { pos: 9, team: "Bonner JSG II", played: 7, points: "3:11", goals: "154:183", diff: -29, wins: 1, draws: 1, losses: 5, form: ["N","N","N","N","U"] },
+    { pos: 10, team: "HSG Siebengebirge-Thomasberg", played: 7, points: "3:11", goals: "120:167", diff: -47, wins: 1, draws: 1, losses: 5, form: ["N","S","N","N","U"] },
     { pos: 11, team: "Wermelskirchener TV", played: 7, points: "2:12", goals: "120:162", diff: -42, wins: 1, draws: 0, losses: 6, form: ["N","N","S","N","N"] },
-    { pos: 12, team: "Wald-Merscheider TV", played: 6, points: "0:12", goals: "105:153", diff: -48, wins: 0, draws: 0, losses: 6, form: ["N","N","N","N","N"] }
+    { pos: 12, team: "Wald-Merscheider TV", played: 7, points: "0:14", goals: "122:186", diff: -64, wins: 0, draws: 0, losses: 7, form: ["N","N","N","N","N"] }
   ]
 };
