@@ -3,7 +3,7 @@
   Stand nach abgeschlossenem 7. Spieltag - 15.11.2026
 */
 window.DASHBOARD_DATA = {
-  updatedAt: "15.11.2026, 18:00 Uhr",
+  updatedAt: "15.11.2026, 19:00 Uhr",
   season: "2026/27",
   league: "Oberliga weibliche Jugend B",
   team: "SSG Wuppertal/HSV Wuppertal",
