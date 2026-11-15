@@ -26,7 +26,8 @@ window.DASHBOARD_DATA = {
     { date: "21.11.2026", time: "16:00", opponent: "HC TV Rhede", venue: "Heim", badge: "Tabellenplatz 3", featured: "silver", logo: "assets/hc-tv-rhede.png" },
     { date: "28.11.2026", time: "13:00", opponent: "HC Gelpe/Strombach", venue: "Auswärts", badge: "Tabellenführer · Platz 1", featured: "gold", logo: "assets/hc-gelpe-strombach.png" },
     { date: "29.11.2026", time: "12:45", opponent: "Tschft. St. Tönis III", venue: "Heim", badge: "Doppelspiel-Wochenende", logo: "assets/st-toenis-iii.png" },
-    { date: "06.12.2026", time: "14:15", opponent: "HSG Siebengebirge-Thomasberg", venue: "Auswärts", badge: "Letztes Spiel vor der Rückrunde", logo: "assets/hsg-siebengebirge.jpg" }{ date: "12.12.2026", time: "", opponent: "TSV Bayer Leverkusen", venue: "Auswärts", badge: "Rückrundenstart", logo: "assets/tsv-bayer-leverkusen.png" }
+    { date: "06.12.2026", time: "14:15", opponent: "HSG Siebengebirge-Thomasberg", venue: "Auswärts", badge: "Letztes Spiel vor der Rückrunde", logo: "assets/hsg-siebengebirge.jpg" },
+    { date: "12.12.2026", time: "", opponent: "TSV Bayer Leverkusen", venue: "Auswärts", badge: "Rückrundenstart", logo: "assets/tsv-bayer-leverkusen.png" }
   ],
   secondRoundStart: "12.12.2026",
   results: [
