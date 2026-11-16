@@ -30,7 +30,8 @@ window.DASHBOARD_DATA = {
     { date: "12.12.2026", time: "", opponent: "TSV Bayer Leverkusen", venue: "Auswärts", badge: "Rückrundenstart", logo: "assets/tsv-bayer-leverkusen.png" }
   ],
   nextMatchday: {
-    number: 8, label: "8. Spieltag",
+    number: 8,
+    label: "8. Spieltag",
     games: [
       { date: "21.11.2026", time: "14:00", home: "TV Korschenbroich wB1", away: "Wermelskirchener TV" },
       { date: "21.11.2026", time: "15:00", home: "SSG Wuppertal/HSV Wuppertal", away: "HC TV Rhede", ourGame: true },
@@ -40,6 +41,7 @@ window.DASHBOARD_DATA = {
       { date: "22.11.2026", time: "18:00", home: "TV Issum", away: "Tschft. St. Tönis III" }
     ]
   },
+
   secondRoundStart: "12.12.2026",
   results: [
     { date: "13.09.2026", opponent: "TSV Bayer Leverkusen", venue: "Heim", scoreFor: 21, scoreAgainst: 16, halftime: "15:6" },

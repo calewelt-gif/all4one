@@ -46,6 +46,17 @@
       <span class="venue">${esc(g.venue)}</span>
       <span class="badge">${esc(g.badge || (i === 0 ? 'Nächste Aufgabe' : 'Termin'))}</span>
     </article>`).join('');
+  const md = d.nextMatchday;
+  if (md && md.games) {
+    $('matchday-label').textContent = md.label;
+    $('matchday-games').innerHTML = md.games.map(g => `
+      <article class="matchday-game ${g.ourGame ? 'our-match' : ''}">
+        <div class="matchday-date">${esc(g.date)}</div>
+        <div class="matchup"><strong>${esc(g.home)}</strong><span class="matchday-time">${esc(g.time)}<small>UHR</small></span><strong>${esc(g.away)}</strong></div>
+        ${g.ourGame ? '<span class="our-badge">SSG/HSV</span>' : ''}
+      </article>`).join('');
+  }
+
   $('round-date').textContent = d.secondRoundStart;
 
   const last = d.results[d.results.length - 1];
