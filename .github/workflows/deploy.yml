@@ -27,7 +27,7 @@ jobs:
           folder: .
           clean: false
 
-      - name: Deploy Test
+      - name: Deploy TEST
         if: github.ref == 'refs/heads/test'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
