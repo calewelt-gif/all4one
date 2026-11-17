@@ -1,0 +1,48 @@
+SSG WUPPERTAL / HSV WUPPERTAL – WOCHEN-DASHBOARD
+=================================================
+
+SCHNELLSTART
+1. Zum Prüfen die Datei „index.html“ doppelklicken.
+2. Den kompletten Ordner auf den Webspace des Vereins oder einen Static-Web-Host hochladen.
+3. Die Startadresse zeigt dann automatisch „index.html“.
+
+WÖCHENTLICHES UPDATE (ca. 5–10 Minuten)
+1. Auf https://www.handball.net/team/95735?season_id=2627 die neuen Ergebnisse, Termine und die Tabelle prüfen.
+2. Die Datei „dashboard-daten.js“ mit Editor/Notepad öffnen.
+3. Im oberen Datenblock aktualisieren:
+   - updatedAt: Datum und Uhrzeit
+   - summary: Tabellenplatz, Bilanz, Punkte und Tore
+   - upcoming: nächste fünf Spiele
+   - results: neue Ergebnisse am Ende ergänzen
+   - standings: komplette aktuelle Tabelle
+4. Datei speichern.
+5. Auf dem Webspace mindestens „dashboard-daten.js“ ersetzen.
+6. Website neu laden; bei alter Anzeige Strg+F5 drücken.
+
+TENDENZ
+- trend: 1  = Platzierung verbessert
+- trend: 0  = unverändert / Vergleich noch offen
+- trend: -1 = Platzierung verschlechtert
+- trendLabel: frei formulierter Begleittext, z. B. „▲ 2 Plätze zur Vorwoche“
+
+VERÖFFENTLICHUNG
+Der Ordner ist eine statische Website ohne Datenbank und funktioniert unter anderem auf:
+- dem bestehenden Vereins-Webspace,
+- GitHub Pages,
+- Netlify Drop,
+- Cloudflare Pages.
+
+Wichtig: Der öffentliche Webhost und dessen Zugangsdaten sind nicht Bestandteil des Pakets. Das Dashboard enthält keine automatische Datenschnittstelle; die Werte werden bewusst über die übersichtliche Datei „dashboard-daten.js“ gepflegt.
+
+DATEIEN
+- index.html            Startseite
+- dashboard-daten.js    wöchentlich zu ändernde Daten
+- styles.css            Gestaltung
+- app.js                Darstellung/Logik
+- assets/                Vereinslogos
+
+DRUCK/PDF
+Auf dem Dashboard oben „PDF / Drucken“ wählen. Im Druckdialog kann die Ansicht als PDF gespeichert werden.
+
+DATENSTAND DIESES PAKETS
+09.11.2026, 12:00 Uhr
