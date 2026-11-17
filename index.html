@@ -41,7 +41,7 @@
     <section class="kpis" id="kpis" aria-label="Saisonkennzahlen"></section>
 
     <section class="section" id="spiele" aria-labelledby="spiele-title">
-      <div class="section-head"><div><p class="eyebrow">Dein Kalender</p><h2 id="spiele-title">Die nächsten fünf Spiele</h2><p>Die wichtigsten Termine und Topgegner sofort erkennbar.</p></div><span class="section-note">Gold = Tabellenführer · Bronze = Tabellendritter</span></div>
+      <div class="section-head"><div><p class="eyebrow">Dein Kalender</p><h2 id="spiele-title">Die nächsten fünf Spiele</h2><p>Die wichtigsten Termine und Topgegner sofort erkennbar.</p></div><span class="section-note">Gold = Tabellenführer · Silber = Tabellenzweiter</span></div>
       <div class="next-game" id="next-game"></div>
       <div class="fixtures" id="fixtures"></div>
       <div class="round-banner"><span><strong>Rückrundenstart</strong><br>Der Start der Rückrunde ist bewusst separat markiert.</span><strong id="round-date">12.12.2026</strong></div>
@@ -66,12 +66,16 @@
           </table>
         </div>
         <div class="table-summary" id="table-summary"></div>
+        <div class="matchday-block">
+          <div class="matchday-head"><div><p class="eyebrow">Liga kompakt</p><h3>Nächster kompletter Spieltag</h3></div><strong id="matchday-label"></strong></div>
+          <div id="matchday-games" class="matchday-games"></div>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
       <span>Wöchentlich aktualisierbares, statisches Dashboard · Saison 2026/27</span>
-      <span>Spieldaten: <a id="footer-source" target="_blank" rel="noopener">handball.net</a> · Vereinslogos: <a id="footer-source" target="_blank" rel="noopener">hsv-wuppertal.de/</a></span>
+      <span>Spieldaten: <a id="footer-source" target="_blank" rel="noopener">handball.net</a> · Vereinslogos aus der bereitgestellten Präsentation</span>
     </footer>
   </main>
 
