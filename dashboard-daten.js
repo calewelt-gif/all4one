@@ -3,7 +3,7 @@
   Stand nach abgeschlossenem 7. Spieltag - 15.11.2026
 */
 window.DASHBOARD_DATA = {
-  updatedAt: "17.11.2026, 10:13 Uhr",
+  updatedAt: "15.11.2026, 18:00 Uhr",
   season: "2026/27",
   league: "Oberliga weibliche Jugend B",
   team: "SSG Wuppertal/HSV Wuppertal",
@@ -23,7 +23,7 @@ window.DASHBOARD_DATA = {
   },
   focus: "Fünf Siege aus sieben Spielen und auf Platz 4 vorgerückt. Die positive Serie mitnehmen und gegen die direkten Spitzenteams konsequent als Mannschaft auftreten.",
   upcoming: [
-    { date: "21.11.2026", time: "16:00", opponent: "HC TV Rhede", venue: "Heim", badge: "Tabellenplatz 3", featured: "silver", logo: "assets/hc-tv-rhede.png" },
+    { date: "21.11.2026", time: "16:00", opponent: "HC TV Rhede", venue: "Heim", badge: "Tabellenplatz 3", featured: "bronze", logo: "assets/hc-tv-rhede.png", link: "HSV_Wuppertal_Scouting_Rhede.html" },
     { date: "28.11.2026", time: "13:00", opponent: "HC Gelpe/Strombach", venue: "Auswärts", badge: "Tabellenführer · Platz 1", featured: "gold", logo: "assets/hc-gelpe-strombach.png" },
     { date: "29.11.2026", time: "12:45", opponent: "Tschft. St. Tönis III", venue: "Heim", badge: "Doppelspiel-Wochenende", logo: "assets/st-toenis-iii.png" },
     { date: "06.12.2026", time: "14:15", opponent: "HSG Siebengebirge-Thomasberg", venue: "Auswärts", badge: "Letztes Spiel vor der Rückrunde", logo: "assets/hsg-siebengebirge.jpg" },
