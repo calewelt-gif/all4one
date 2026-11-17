@@ -38,14 +38,18 @@
       <div class="side"><img src="${esc(next.logo)}" alt="Logo ${esc(next.opponent)}"><h3>${esc(next.opponent)}</h3></div>`;
   }
 
-  $('fixtures').innerHTML = d.upcoming.map((g, i) => `
-    <article class="fixture ${g.featured ? `featured-${esc(g.featured)}` : ''}" aria-label="Spiel gegen ${esc(g.opponent)}">
+  $('fixtures').innerHTML = d.upcoming.map((g, i) => {
+    const open = g.link ? `<a class="fixture fixture-link ${g.featured ? `featured-${esc(g.featured)}` : ''}" href="${esc(g.link)}" target="_blank" rel="noopener noreferrer" aria-label="Spiel gegen ${esc(g.opponent)} – Scouting in neuem Tab öffnen">` : `<article class="fixture ${g.featured ? `featured-${esc(g.featured)}` : ''}" aria-label="Spiel gegen ${esc(g.opponent)}">`;
+    const close = g.link ? '</a>' : '</article>';
+    return `
+    ${open}
       <div><span class="date">${esc(g.date)}</span><br><span class="time">${esc(g.time)} Uhr</span></div>
       <img src="${esc(g.logo)}" alt="Logo ${esc(g.opponent)}">
       <div class="opponent">${esc(g.opponent)}</div>
       <span class="venue">${esc(g.venue)}</span>
       <span class="badge">${esc(g.badge || (i === 0 ? 'Nächste Aufgabe' : 'Termin'))}</span>
-    </article>`).join('');
+    ${close}`;
+  }).join('');
   const md = d.nextMatchday;
   if (md && md.games) {
     $('matchday-label').textContent = md.label;
