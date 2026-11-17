@@ -14,7 +14,7 @@
 
   document.title = `${d.team} · Wochen-Dashboard`;
   $('brand-logo').src = d.teamLogo;
-  $('hero-logo').src = d.teamLogo;
+  $('hero-logo').src = 'assets/hsvweiblichdamenB.png';
   $('team-name').textContent = d.team;
   $('season').textContent = `Saison ${d.season}`;
   $('league').textContent = d.league;
@@ -46,6 +46,17 @@
       <span class="venue">${esc(g.venue)}</span>
       <span class="badge">${esc(g.badge || (i === 0 ? 'Nächste Aufgabe' : 'Termin'))}</span>
     </article>`).join('');
+  const md = d.nextMatchday;
+  if (md && md.games) {
+    $('matchday-label').textContent = md.label;
+    $('matchday-games').innerHTML = md.games.map(g => `
+      <article class="matchday-game ${g.ourGame ? 'our-match' : ''}">
+        <div class="matchday-date">${esc(g.date)}</div>
+        <div class="matchup"><strong class="match-team home-team">${g.homeLogo ? `<img src="${esc(g.homeLogo)}" alt="">` : ``}<span>${esc(g.home)}</span></strong><span class="matchday-time">${esc(g.time)}<small>UHR</small></span><strong class="match-team away-team">${g.awayLogo ? `<img src="${esc(g.awayLogo)}" alt="">` : ``}<span>${esc(g.away)}</span></strong></div>
+        ${g.ourGame ? '<span class="our-badge">SSG/HSV</span>' : ''}
+      </article>`).join('');
+  }
+
   $('round-date').textContent = d.secondRoundStart;
 
   const last = d.results[d.results.length - 1];
