@@ -1,10 +1,10 @@
-name: Deploy Main and Dev
+name: Deploy Main and Test
 
 on:
   push:
     branches:
       - main
-      - dev
+      - test
 
   workflow_dispatch:
 
@@ -27,11 +27,11 @@ jobs:
           folder: .
           clean: false
 
-      - name: Deploy DEV
-        if: github.ref == 'refs/heads/dev'
+      - name: Deploy Test
+        if: github.ref == 'refs/heads/test'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: .
-          target-folder: dev
+          target-folder: test
           clean: false
