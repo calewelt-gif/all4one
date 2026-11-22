@@ -3,7 +3,7 @@
   Stand nach abgeschlossenem 8. Spieltag - 21.11.2026
 */
 window.DASHBOARD_DATA = {
-  updatedAt: "22.11.2026, 07:20 Uhr",
+  updatedAt: "22.11.2026, 19:44 Uhr",
   season: "2026/27",
   league: "Oberliga weibliche Jugend B",
   team: "SSG Wuppertal/HSV Wuppertal",
@@ -42,7 +42,7 @@ window.DASHBOARD_DATA = {
       { date: "21.11.2026", time: "15:45", home: "HSG Refrath/Hand", homeLogo: "assets/hsg-refrath-hand.png", away: "HSG Siebengebirge-Thomasberg", awayLogo: "assets/hsg-siebengebirge.jpg", score: "22:24" },
       { date: "21.11.2026", time: "16:00", home: "Wald-Merscheider TV", homeLogo: "assets/wald-merscheider-tv.png", away: "HC Gelpe/Strombach", awayLogo: "assets/hc-gelpe-strombach.png", score: "16:31" },
       { date: "21.11.2026", time: "16:15", home: "Bonner JSG II", homeLogo: "assets/bonner-jsg.png", away: "TSV Bayer Leverkusen", awayLogo: "assets/tsv-bayer-leverkusen.png", score: "30:35" },
-      { date: "22.11.2026", time: "18:00", home: "TV Issum", homeLogo: "assets/tv-issum.png", away: "Tschft. St. Tönis III", awayLogo: "assets/st-toenis-iii.png" }
+      { date: "22.11.2026", time: "18:00", home: "TV Issum", homeLogo: "assets/tv-issum.png", away: "Tschft. St. Tönis III", awayLogo: "assets/st-toenis-iii.png", score: "27:17" }
     ]
   },
 
@@ -64,10 +64,10 @@ window.DASHBOARD_DATA = {
     { pos: 2, team: "TV Korschenbroich wB1", played: 8, points: "14:2", goals: "194:143", diff: 51, wins: 7, draws: 0, losses: 1, form: ["N","S","S","S","S"] },
     { pos: 3, team: "SSG Wuppertal/HSV Wuppertal", played: 8, points: "12:4", goals: "189:161", diff: 28, wins: 6, draws: 0, losses: 2, form: ["N","S","S","S","S"] },
     { pos: 4, team: "HC TV Rhede", played: 8, points: "12:4", goals: "211:180", diff: 31, wins: 6, draws: 0, losses: 2, form: ["S","S","S","S","N"] },
-    { pos: 5, team: "TV Issum", played: 7, points: "8:6", goals: "166:158", diff: 8, wins: 4, draws: 0, losses: 3, form: ["S","S","N","N","N"] },
+    { pos: 5, team: "TV Issum", played: 8, points: "10:6", goals: "193:175", diff: 18, wins: 5, draws: 0, losses: 3, form: ["S","N","N","N","S"] },
     { pos: 6, team: "HSG Refrath/Hand", played: 8, points: "8:8", goals: "204:190", diff: 14, wins: 4, draws: 0, losses: 4, form: ["S","N","N","S","N"] },
     { pos: 7, team: "TSV Bayer Leverkusen", played: 8, points: "8:8", goals: "188:193", diff: -5, wins: 4, draws: 0, losses: 4, form: ["S","S","S","N","S"] },
-    { pos: 8, team: "Tschft. St. Tönis III", played: 7, points: "6:8", goals: "137:143", diff: -6, wins: 3, draws: 0, losses: 4, form: ["S","N","N","S","N"] },
+    { pos: 8, team: "Tschft. St. Tönis III", played: 8, points: "6:10", goals: "154:170", diff: -16, wins: 3, draws: 0, losses: 5, form: ["N","N","S","N","N"] },
     { pos: 9, team: "HSG Siebengebirge-Thomasberg", played: 8, points: "5:11", goals: "144:189", diff: -45, wins: 2, draws: 1, losses: 5, form: ["S","N","N","U","S"] },
     { pos: 10, team: "Bonner JSG II", played: 8, points: "3:13", goals: "184:218", diff: -34, wins: 1, draws: 1, losses: 6, form: ["N","N","N","U","N"] },
     { pos: 11, team: "Wermelskirchener TV", played: 8, points: "2:14", goals: "134:196", diff: -62, wins: 1, draws: 0, losses: 7, form: ["N","S","N","N","N"] },
