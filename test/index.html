@@ -53,6 +53,20 @@
         .nav a, .nav .button { padding:8px 6px; font-size:.74rem; }
         .brand img { max-width:44px; }
       }
+
+      /* Passwortgeschützte Scouting-Links in den Spielkarten */
+      #fixtures .fixture.scouting-link {
+        cursor: pointer;
+        transition: transform .18s ease, box-shadow .18s ease, outline-color .18s ease;
+      }
+      #fixtures .fixture.scouting-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(6, 51, 31, .14);
+      }
+      #fixtures .fixture.scouting-link:focus-visible {
+        outline: 3px solid #146c3a;
+        outline-offset: 3px;
+      }
 </style>
 </head>
 <body>
@@ -103,22 +117,28 @@
     (() => {
       "use strict";
 
-      const scoutingFile = "HSV_Wuppertal_Scouting_Gelpe.html";
       const scoutingPassword = "all4one";
-      const gelpeCard = Array.from(document.querySelectorAll("#fixtures .fixture")).find((card) =>
-        card.textContent.includes("HC Gelpe/Strombach")
-      );
+      const scoutingLinks = [
+        {
+          opponent: "HC Gelpe/Strombach",
+          file: "HSV_Wuppertal_Scouting_Gelpe.html",
+          passwordText: "Bitte Passwort eingeben, um das Scouting gegen HC Gelpe/Strombach zu öffnen."
+        },
+        {
+          opponent: "Tschft. St. Tönis III",
+          file: "HSV_Wuppertal_Scouting_St_Toenis.html",
+          passwordText: "Bitte Passwort eingeben, um das Scouting gegen Tschft. St. Tönis III zu öffnen."
+        }
+      ];
 
-      if (!gelpeCard) return;
-
-      gelpeCard.addEventListener("click", () => {
+      function openProtectedScouting(config) {
         const passwordTab = window.open("about:blank", "_blank");
         if (!passwordTab) {
           window.alert("Der neue Tab konnte nicht geöffnet werden. Bitte Pop-ups für diese Seite erlauben.");
           return;
         }
 
-        const targetUrl = new URL(scoutingFile, window.location.href).href;
+        const targetUrl = new URL(config.file, window.location.href).href;
         const passwordDocument = passwordTab.document;
         passwordDocument.open();
         passwordDocument.write(`<!doctype html>
@@ -149,7 +169,7 @@
   <main>
     <p class="eyebrow">HSV Wuppertal · Scouting</p>
     <h1>Passwort erforderlich</h1>
-    <p>Bitte Passwort eingeben, um das Scouting gegen HC Gelpe/Strombach zu öffnen.</p>
+    <p>${config.passwordText}</p>
     <form id="password-form">
       <label for="scouting-password">Passwort</label>
       <input id="scouting-password" name="password" type="password" autocomplete="current-password" required autofocus>
@@ -178,6 +198,31 @@
 
         passwordTab.opener = null;
         passwordInput.focus();
+      }
+
+      const fixtureCards = Array.from(document.querySelectorAll("#fixtures .fixture"));
+      scoutingLinks.forEach((config) => {
+        const card = fixtureCards.find((item) => item.textContent.includes(config.opponent));
+        if (!card) return;
+
+        card.classList.add("scouting-link");
+        card.setAttribute("role", "link");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", `${config.opponent}: passwortgeschütztes Scouting in neuem Tab öffnen`);
+        card.setAttribute("title", "Passwortgeschütztes Scouting in neuem Tab öffnen");
+
+        if (config.opponent === "HC Gelpe/Strombach") {
+          const badge = card.querySelector(".badge");
+          if (badge) badge.textContent = "TABELLENFÜHRER · PLATZ 1";
+        }
+
+        card.addEventListener("click", () => openProtectedScouting(config));
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openProtectedScouting(config);
+          }
+        });
       });
     })();
   </script>
