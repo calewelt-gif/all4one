@@ -33,6 +33,36 @@
     @media (max-width: 700px) {
       #naechster-spieltag { padding: 18px; border-radius: 16px; }
     }
+
+    /* Geschützter Scouting-Link für das Spiel gegen Gelpe */
+    .fixture.scouting-link {
+      cursor: pointer;
+      outline: none;
+      position: relative;
+    }
+    .fixture.scouting-link:hover,
+    .fixture.scouting-link:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(6, 51, 31, .20);
+    }
+    .fixture.scouting-link:focus-visible {
+      outline: 3px solid #d6a928;
+      outline-offset: 3px;
+    }
+    .fixture.scouting-link .badge {
+      background: #06331f;
+      color: #fff;
+    }
+    .fixture.scouting-link::after {
+      content: "Scouting 🔒";
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      font-weight: 800;
+      font-size: .72rem;
+      letter-spacing: .02em;
+      color: #06331f;
+    }
   
       /* Mobile Header Fix */
       @media (max-width: 700px) {
@@ -99,5 +129,46 @@
     <footer class="footer"><span>Wöchentlich aktualisierbares, statisches Dashboard · Saison 2026/27</span><span>Spieldaten: <a id="footer-source" target="_blank" rel="noopener">handball.net</a> · Vereinslogos aus der bereitgestellten Präsentation</span></footer>
   </main>
   <script src="dashboard-daten.js"></script><script src="app.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const scoutingFile = "HSV_Wuppertal_Scouting_Gelpe.html";
+      const expectedPassword = "all4one";
+
+      const openProtectedScouting = () => {
+        const enteredPassword = window.prompt("Passwort für das Gelpe-Scouting:");
+        if (enteredPassword === null) return;
+        if (enteredPassword === expectedPassword) {
+          window.location.href = scoutingFile;
+        } else {
+          window.alert("Falsches Passwort.");
+        }
+      };
+
+      const gelpeCard = Array.from(document.querySelectorAll("#fixtures .fixture")).find((card) =>
+        card.textContent.includes("HC Gelpe/Strombach")
+      );
+
+      if (!gelpeCard) return;
+
+      gelpeCard.classList.add("scouting-link");
+      gelpeCard.setAttribute("role", "link");
+      gelpeCard.setAttribute("tabindex", "0");
+      gelpeCard.setAttribute("aria-label", "Passwortgeschütztes Scouting für HC Gelpe/Strombach öffnen");
+      gelpeCard.setAttribute("title", "Gelpe-Scouting öffnen (passwortgeschützt)");
+
+      const badge = gelpeCard.querySelector(".badge");
+      if (badge) badge.textContent = "Scouting öffnen · Passwort";
+
+      gelpeCard.addEventListener("click", openProtectedScouting);
+      gelpeCard.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openProtectedScouting();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
