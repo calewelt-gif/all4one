@@ -67,3 +67,11 @@ h1{font-size:clamp(2rem,5vw,4.2rem);line-height:.97;letter-spacing:-.055em;margi
 #fixtures .fixture.topspiel-silber .badge.topspiel-badge{border-color:#707982;background:#4f5964;color:#fff;box-shadow:0 4px 10px rgba(32,39,46,.2)}
 #fixtures .fixture.topspiel-silber:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(58,68,79,.34),0 0 0 5px rgba(192,198,204,.34)}
 @media(prefers-reduced-motion:reduce){#fixtures .fixture.topspiel-silber,#fixtures .fixture.topspiel-silber:hover{transform:none}}
+
+/* Topspiel gegen den Tabellenführer HC Gelpe/Strombach */
+#fixtures .fixture.topspiel-gold{position:relative;overflow:hidden;border:2px solid #b8870b;background:linear-gradient(135deg,#fffdf2 0%,#f8df91 38%,#d4a72c 100%);color:#2c2105;box-shadow:0 16px 34px rgba(139,101,7,.3),0 0 0 4px rgba(226,190,82,.3);transform:translateY(-2px)}
+#fixtures .fixture.topspiel-gold::after{content:"TOPSPIEL";position:absolute;top:12px;right:-35px;width:132px;padding:5px 0;background:#8d6708;color:#fff;font-size:.68rem;font-weight:900;letter-spacing:.09em;text-align:center;transform:rotate(38deg);pointer-events:none}
+#fixtures .fixture.topspiel-gold .time{color:#755400}
+#fixtures .fixture.topspiel-gold .badge.topspiel-badge{border-color:#8d6708;background:#8d6708;color:#fff;box-shadow:0 4px 10px rgba(91,66,4,.24)}
+#fixtures .fixture.topspiel-gold:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(139,101,7,.38),0 0 0 5px rgba(226,190,82,.38)}
+@media(prefers-reduced-motion:reduce){#fixtures .fixture.topspiel-gold,#fixtures .fixture.topspiel-gold:hover{transform:none}}
