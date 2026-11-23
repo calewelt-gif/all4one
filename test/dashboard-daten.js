@@ -3,7 +3,7 @@
   Stand nach abgeschlossenem 8. Spieltag - 21.11.2026
 */
 window.DASHBOARD_DATA = {
-  updatedAt: "22.11.2026, 19:44 Uhr",
+  updatedAt: "23.11.2026, 06:44 Uhr",
   season: "2026/27",
   league: "Oberliga weibliche Jugend B",
   team: "SSG Wuppertal/HSV Wuppertal",
@@ -23,7 +23,7 @@ window.DASHBOARD_DATA = {
     goalsAgainst: 161
   },
 
-  focus: "Sechs Siege aus acht Spielen und auf Platz 3 vorgerückt. Nach dem klaren 29:12 gegen HC TV Rhede wartet mit Tabellenführer HC Gelpe/Strombach die nächste Topaufgabe.",
+  focus: "Sechs Siege aus acht Spielen und auf Platz 3 vorgerückt. Nach dem klaren 29:12 gegen HC TV Rhede wartet mit Tabellenführer HC Gelpe/Strombach die nächste Topaufgabe. Kämpfen ist angeasgt!!!",
 
   upcoming: [
     { date: "28.11.2026", time: "13:00", opponent: "HC Gelpe/Strombach", venue: "Auswärts", badge: "Tabellenführer · Platz 1", featured: "gold", logo: "assets/hc-gelpe-strombach.png" },
