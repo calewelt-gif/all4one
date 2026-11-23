@@ -35,14 +35,20 @@ window.DASHBOARD_DATA = {
 
   nextMatchday: {
     number: 9,
-    label: "9. Spieltag · 28.11.2026",
+    label: "9. Spieltag · 28./29.11.2026",
     games: [
       { date: "28.11.2026", time: "12:30", home: "HSG Siebengebirge-Thomasberg", homeLogo: "assets/hsg-siebengebirge.jpg", away: "TV Issum", awayLogo: "assets/tv-issum.png", score: "" },
       { date: "28.11.2026", time: "13:00", home: "HC Gelpe/Strombach", homeLogo: "assets/hc-gelpe-strombach.png", away: "SSG Wuppertal/HSV Wuppertal", awayLogo: "assets/ssg-hsv-wuppertal.png", score: "", ourGame: true },
       { date: "28.11.2026", time: "14:00", home: "Wermelskirchener TV", homeLogo: "assets/wermelskirchener-tv.jpg", away: "HC TV Rhede", awayLogo: "assets/hc-tv-rhede.png", score: "" },
       { date: "28.11.2026", time: "16:00", home: "TV Korschenbroich wB1", homeLogo: "assets/tv-korschenbroich.png", away: "Bonner JSG II", awayLogo: "assets/bonner-jsg.png", score: "" },
       { date: "28.11.2026", time: "16:45", home: "Tschft. St. Tönis III", homeLogo: "assets/st-toenis-iii.png", away: "Wald-Merscheider TV", awayLogo: "assets/wald-merscheider-tv.png", score: "" },
-      { date: "28.11.2026", time: "17:30", home: "TSV Bayer Leverkusen", homeLogo: "assets/tsv-bayer-leverkusen.png", away: "HSG Refrath/Hand", awayLogo: "assets/hsg-refrath-hand.png", score: "" }
+      { date: "28.11.2026", time: "17:30", home: "TSV Bayer Leverkusen", homeLogo: "assets/tsv-bayer-leverkusen.png", away: "HSG Refrath/Hand", awayLogo: "assets/hsg-refrath-hand.png", score: "" },
+      { date: "29.11.2026", time: "12:30", home: "TV Issum", homeLogo: "assets/tv-issum.png", away: "TSV Bayer Leverkusen", awayLogo: "assets/tsv-bayer-leverkusen.png", score: "" },
+      { date: "29.11.2026", time: "12:45", home: "SSG Wuppertal/HSV Wuppertal", homeLogo: "assets/ssg-hsv-wuppertal.png", away: "Tschft. St. Tönis III", awayLogo: "assets/st-toenis-iii.png", score: "", ourGame: true },
+      { date: "29.11.2026", time: "14:15", home: "Wald-Merscheider TV", homeLogo: "assets/wald-merscheider-tv.png", away: "HSG Siebengebirge-Thomasberg", awayLogo: "assets/hsg-siebengebirge.jpg", score: "" },
+      { date: "29.11.2026", time: "14:45", home: "HC TV Rhede", homeLogo: "assets/hc-tv-rhede.png", away: "HC Gelpe/Strombach", awayLogo: "assets/hc-gelpe-strombach.png", score: "" },
+      { date: "29.11.2026", time: "15:45", home: "HSG Refrath/Hand", homeLogo: "assets/hsg-refrath-hand.png", away: "TV Korschenbroich wB1", awayLogo: "assets/tv-korschenbroich.png", score: "" },
+      { date: "29.11.2026", time: "16:00", home: "Wermelskirchener TV", homeLogo: "assets/wermelskirchener-tv.jpg", away: "Bonner JSG II", awayLogo: "assets/bonner-jsg.png", score: "" }
     ]
   },
   secondRoundStart: "12.12.2026",
