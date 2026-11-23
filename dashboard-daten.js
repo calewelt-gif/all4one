@@ -35,7 +35,7 @@ window.DASHBOARD_DATA = {
 
   nextMatchday: {
     number: 9,
-    label: "9. Spieltag · 28./29.11.2026",
+    label: "9./10 Spieltag · 28./29.11.2026",
     games: [
       { date: "28.11.2026", time: "12:30", home: "HSG Siebengebirge-Thomasberg", homeLogo: "assets/hsg-siebengebirge.jpg", away: "TV Issum", awayLogo: "assets/tv-issum.png", score: "" },
       { date: "28.11.2026", time: "13:00", home: "HC Gelpe/Strombach", homeLogo: "assets/hc-gelpe-strombach.png", away: "SSG Wuppertal/HSV Wuppertal", awayLogo: "assets/ssg-hsv-wuppertal.png", score: "", ourGame: true },
