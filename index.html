@@ -4,7 +4,8 @@
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
   <meta name="description" content="Wöchentliches Saison-Dashboard der weiblichen B-Jugend von SSG Wuppertal/HSV Wuppertal.">
   <meta name="theme-color" content="#06331f">
   <meta property="og:title" content="SSG Wuppertal/HSV Wuppertal · Wochen-Dashboard">
@@ -33,27 +34,6 @@
     @media (max-width: 700px) {
       #naechster-spieltag { padding: 18px; border-radius: 16px; }
     }
-  
-      /* Mobile Header Fix */
-      @media (max-width: 700px) {
-        .topbar { position: relative; }
-        .topbar-inner { display:flex; flex-direction:column; align-items:stretch; gap:12px; padding-top:10px; padding-bottom:10px; }
-        .brand { width:100%; min-width:0; display:flex; align-items:center; gap:10px; }
-        .brand img { flex:0 0 auto; max-width:52px; height:auto; }
-        .brand > div { min-width:0; flex:1 1 auto; }
-        .brand strong, .brand span { display:block; white-space:normal; overflow-wrap:anywhere; }
-        .brand strong { font-size:.95rem; line-height:1.15; }
-        .brand span { font-size:.76rem; line-height:1.25; }
-        .nav { width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; align-items:stretch; }
-        .nav a, .nav .button { min-width:0; width:100%; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; white-space:normal; overflow-wrap:anywhere; line-height:1.2; padding:9px 8px; font-size:.78rem; }
-      }
-      @media (max-width:390px) {
-        .topbar-inner { gap:10px; }
-        .nav { gap:6px; }
-        .nav a, .nav .button { padding:8px 6px; font-size:.74rem; }
-        .brand img { max-width:44px; }
-      }
-
       /* Passwortgeschützte Scouting-Links in den Spielkarten */
       #fixtures .fixture.scouting-link {
         cursor: pointer;
