@@ -67,6 +67,7 @@
         outline: 3px solid #146c3a;
         outline-offset: 3px;
       }
+
 </style>
 </head>
 <body>
@@ -90,7 +91,7 @@
     </section>
     <section class="kpis" id="kpis" aria-label="Saisonkennzahlen"></section>
     <section class="section" id="spiele" aria-labelledby="spiele-title">
-      <div class="section-head"><div><p class="eyebrow">Dein Kalender</p><h2 id="spiele-title">Die nächsten fünf Spiele</h2><p>Die wichtigsten Termine und Topgegner sofort erkennbar.</p></div><span class="section-note">Gold = Tabellenführer</span></div>
+      <div class="section-head"><div><p class="eyebrow">Dein Kalender</p><h2 id="spiele-title">Die nächsten fünf Spiele</h2><p>Die wichtigsten Termine und Topgegner sofort erkennbar.</p></div><span class="section-note">Gold = Topspiel (Platz 1) · Silber = Topspiel (Platz 2)</span></div>
       <div class="next-game" id="next-game"></div><div class="fixtures" id="fixtures"></div>
       <div class="round-banner"><span><strong>Rückrundenstart</strong><br>Der Start der Rückrunde ist bewusst separat markiert.</span><strong id="round-date">12.12.2026</strong></div>
     </section>
@@ -201,6 +202,25 @@
       }
 
       const fixtureCards = Array.from(document.querySelectorAll("#fixtures .fixture"));
+
+      const topGame = fixtureCards.find((item) =>
+        item.textContent.includes("Korschenbroich") && /19\.12(?:\.2026)?/.test(item.textContent)
+      );
+      if (topGame) {
+        topGame.classList.add("topspiel-silber");
+        topGame.setAttribute("data-topspiel", "true");
+        topGame.setAttribute("title", "Topspiel gegen den Tabellenzweiten TV Korschenbroich");
+
+        let topGameBadge = topGame.querySelector(".badge");
+        if (!topGameBadge) {
+          topGameBadge = document.createElement("span");
+          topGameBadge.className = "badge";
+          topGame.prepend(topGameBadge);
+        }
+        topGameBadge.classList.add("topspiel-badge");
+        topGameBadge.textContent = "TOPSPIEL · GEGNER PLATZ 2";
+      }
+
       scoutingLinks.forEach((config) => {
         const card = fixtureCards.find((item) => item.textContent.includes(config.opponent));
         if (!card) return;
@@ -212,8 +232,18 @@
         card.setAttribute("title", "Passwortgeschütztes Scouting in neuem Tab öffnen");
 
         if (config.opponent === "HC Gelpe/Strombach") {
-          const badge = card.querySelector(".badge");
-          if (badge) badge.textContent = "TABELLENFÜHRER · PLATZ 1";
+          card.classList.add("topspiel-gold");
+          card.setAttribute("data-topspiel", "true");
+          card.setAttribute("title", "Topspiel gegen den Tabellenführer HC Gelpe/Strombach");
+
+          let badge = card.querySelector(".badge");
+          if (!badge) {
+            badge = document.createElement("span");
+            badge.className = "badge";
+            card.append(badge);
+          }
+          badge.classList.add("topspiel-badge");
+          badge.textContent = "TOPSPIEL · TABELLENFÜHRER · PLATZ 1";
         }
 
         card.addEventListener("click", () => openProtectedScouting(config));
